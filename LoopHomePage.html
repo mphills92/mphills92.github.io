@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags MUST come first in the head -->
+    
+    <title>Loop - Because every golfer deserves a caddie</title>
+
+    <!-- Bootstrap Stylesheet and Libraries-->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</head>
+
+<style>
+	body, h1, h2, h3, h4, h5, h6, p {
+		font-weight: lighter;
+		font-family: 'Shift', "Avenir Next", sans-serif;	
+		}
+	.jumbotron {
+		background-image: url("GolfCourseSunset.jpeg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		/* background-color: rgb(205, 205, 205); */
+		color: white;
+		padding: 0px 0px 0px;
+		}
+		
+	.jumbotron h2 {
+		letter-spacing: 2px;
+		font-size: 40px;
+	}
+	
+	.jumbotron h3 {
+		letter-spacing: 2px;
+		font-size: 60px;
+		padding: 250px 0px 20px;
+	}
+	
+	.jumbotron h4 {
+		letter-spacing: 2px;
+		font-size: 25px;
+	}
+	
+	.jumbotron p {
+		letter-spacing: 2px;
+		font-size: 20px;
+	}
+	
+	.jumbotron li {
+		text-decoration: none;
+		list-style: none;
+	}
+	.jumbotron .container {
+		width: auto;
+		margin-left: 5%;
+		margin-right: 5%;
+		padding-top: 5%;
+		padding-bottom: 0px;
+	}
+	
+	/*Sets the load properties for the Sign Up button*/
+	.jumbotron .btn-default {
+		background-color: rgb(0, 51, 0);  /* Masters Green */
+		color: rgb(245, 245, 245);
+		border: none;
+		width: 200px;
+		font-weight: lighter;
+		font-family: 'Shift', "Avenir Next", sans-serif;
+		letter-spacing: 2px;
+		margin: 30px 0px 200px;
+	}
+	
+	/* Sets the hover properties for the Sign Up button */
+	.jumbotron .btn-default:hover {
+		background-color: rgb(0, 61, 0);  /* Lighter Masters Green */
+		color: rgb(255, 255, 255);  /* White */
+	}
+	
+	.container-fluid {
+		background-color: rgb(0, 0, 0); /*rgb(255, 255, 255);*/
+		padding: 50px 0px 50px;
+		}
+		
+	.container-divider {
+		background-color: rgb(15, 15, 15);
+		padding: 2px 100px 2px;
+	}
+		
+	.navbar {
+		margin-bottom:0;
+		background-color: rgb(0, 51, 0);  /* Masters Green */
+		z-index: 9999;
+		border: 0;
+		font-size: 14px !important;
+		line-size: 1.5 !important;
+		letter-spacing: 4px;
+		border-radius: 0;
+		}
+	.navbar li a, .navbar .navbar-brand {
+		color: rgb(245, 245, 245) !important; /*Light Gray*/
+		}
+	.navbar-nav li a:hover, .navbar-nav li a:active {
+		color: rgb(255, 255, 255) !important;  /* White */
+		background-color: rgb(0, 61, 0) !important;  /* Lighter Masters Green */
+		}
+	.navbar-right .btn-default {
+		background-color: rgb(0, 51, 0);  /* Masters Green */
+		color: rgb(245, 245, 245); /* White */
+		font-size: 13px !important;
+		letter-spacing: 2px;
+		border: solid;
+		border-width: 1px;
+		margin-top: 10%;
+		width: 100px;
+		font-weight: lighter;
+		font-family: 'Shift', "Helvetica Neue", sans-serif;
+	}
+	.navbar-right .btn-default:hover {
+		background-color: rgb(0, 61, 0); /* Light Masters Green */
+		color: rgb(255, 255, 255); /* White */
+	}
+	.navbar-default .navbar-toggle {
+		border-color: transparent;
+		color: whitesmoke !important;
+		}
+	.carousel-control.right, .carousel-control.left {
+		background-image: none;
+		color: whitesmoke;
+	}
+	.carousel-indicators li {
+      		border-color: #f4511e;
+ 	 }
+ 	 .carousel-indicators li.active {
+    	 	background-color: #f4511e;
+  	}
+  	.item h4 {
+      		font-size: 40px;
+      		line-height: 1.375em;
+     		 font-weight: 400;
+      		font-style: italic;
+      		margin: 70px 0;
+  	}
+	footer a {
+		color: black;
+		text-decoration: none;
+		}
+	footer a:hover {
+		color: #ff7519;
+		text-decoration: none;
+		}
+	
+</style>
+
+<!-- Scrollspy feature -->
+<body id="live">
+
+<!-- Navigation bar and icon, need to change link text as navigation bar sections are changed -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="live#" style="font-size: 28px">LOOP</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-left" style="margin-left: 25px">
+					<li><a href="#golfers">&nbsp FOR GOLFERS &nbsp</a></li>
+					<li><a href="#caddies">&nbsp FOR CADDIES &nbsp</a></li>
+					<li><a href="#courses">&nbsp FOR COURSES &nbsp</a></li>
+					<li><a href="#about">&nbsp OUR STORY &nbsp</a></li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</nav>
+
+<!-- Jumbotron Text -->	
+	<div class="jumbotron text-center">
+		<h3>Because every golfer <br> deserves a caddie. </h3>
+		<button type="button" class="btn btn-default btn-lg" id="btn-active">SIGN UP</button>
+	
+<!-- End of Jumbotron Text -->
+
+	<div id="golfers" class="container-fluid">
+	<br> <br>
+		<div class"row">
+			<div class="col-md-12">
+				<h2> FOR EVERYDAY GOLFERS</h2>
+				<h4>Welcome to a new way to connect with caddies, available at the touch of a finger.</h4>
+				<br> <br> <br> <br>
+			</div> 
+		</div>
+		
+		<div class"row">
+			<div class="col-md-6">
+				<img src="iOSLandingPageMockup.png" alt="Landing Page" style="float: right; margin-right: 10%; width:300px; height:588px;">
+			</div>
+			<div class="col-md-6">
+				<p style="height: 300px; float: left; margin-top: 275px; margin-left: 0px;"> A simple, elegant way to reserve a peer-rated <br> golf caddie at public and private golf courses.</p>
+			</div> 
+		</div>
+		
+		<div class"row">
+			<div class="col-md-6">
+				<p style="height: 295px; float: right; margin-top: 275px; margin-right: 0px;"> Explore our partner courses nearby. <br>Just choose the date and time for your golf round...</p>
+			</div>
+			<div class="col-md-6">
+				<img src="ChooseCourseViewMockUp.png" alt="Landing Page" style="float: left; margin-left: 10%; width:300px; height:588px;">
+				<br> <br>
+			</div> 
+		</div>
+		
+		<div class"row">
+			<div class="col-md-6">
+				<img src="AvailableCaddiesViewMockUp.png" alt="Available Caddies" style="float: right; margin-right: 10%; width:300px; height:588px;">
+			</div>
+			<div class="col-md-6">
+				<p style="height: 300px; float: left; margin-top: 275px; margin-left: 0px;"> ...and select a caddie from those available in your area. <br> Confirm your reservation and get ready for some golf.</p>
+			</div> 
+			<br> <br> <br> <br> <br> <br>
+		</div>
+	</div>
+	
+	<div class="container-divider">
+	</div>
+	
+	<div id="caddies" class="container-fluid">
+		<div class"row">
+			<div class="col-md-12">
+				<h2>FOR WORKING CADDIES</h2>
+				<p>Easily secure jobs across multiple golf courses and connect with your golfers.</p>
+				<p> </p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+			</div>
+			<!-- 	<div class="col-sm-4">
+			<span class="glyphicon glyphicon-signal logo"></span>
+			</div> -->
+		</div>
+	</div>
+	
+	<div class="container-divider">
+	</div>
+	
+	<div id="courses" class="container-fluid">
+		<div class"row">
+			<div class="col-md-12">
+				<h2>FOR GOLF COURSES</h2>
+				<p>Improve customer experience while simultaneously reducing maintenance costs and operational disruptions.</p>
+				<p></p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+			</div>
+			<!-- 	<div class="col-sm-4">
+			<span class="glyphicon glyphicon-signal logo"></span>
+			</div> -->
+		</div>
+	</div>
+	
+	<div class="container-divider">
+	</div>
+	
+	<div id="about" class="container-fluid">
+		<div class"row">
+			<div class="col-md-12">
+				<h2>OUR STORY</h2>
+				<p>How we got here. And how we're changing the game of golf.</p>
+				<p> </p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+			</div>
+			<!-- 	<div class="col-sm-4">
+			<span class="glyphicon glyphicon-signal logo"></span>
+			</div> -->
+		</div>
+	</div>
+	
+	<div class="container-divider">
+	</div>
+	
+	<footer class="container-fluid text-center">
+		<p style="font-size: 12px">&copy 2016  Loop Technologies  - All Rights Reserved </p>
+	</footer>
+	
+<!-- Add smooth scrolling to all navbar and footer links -->
+	<script>
+		$(document).ready(function(){
+  		$(".navbar a, footer a[href='#homePage']").on('click', function(event) {
+    		event.preventDefault();
+    		var hash = this.hash;
+		<!-- Using jQuery's animate() method to add smooth scoll; 900 specifies the number of milliseconds to scoll to specified area-->
+    			$('html, body').animate({
+      			scrollTop: $(hash).offset().top
+    				}, 900, function(){
+         			window.location.hash = hash;
+    				});
+  			});
+		})
+</script>
+
+</body>
+
+</html>
